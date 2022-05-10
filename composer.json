@@ -10,7 +10,7 @@
     },
 
     "require": {
-        "cejobelo/hamtaro": "^0.0.0"
+        "cejobelo/hamtaro": "^1.0.0"
     },
 
     "authors": [
