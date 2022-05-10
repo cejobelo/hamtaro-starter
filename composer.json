@@ -1,0 +1,33 @@
+{
+    "name": "cejobelo/hamtaro-starter",
+    "type": "project",
+    "license": "MIT",
+
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+
+    "require": {
+        "cejobelo/hamtaro": "^0.0.0"
+    },
+
+    "authors": [
+        {
+            "name": "Phil'dy Jocelyn Belcou",
+            "email": "pj.belcou@gmail.com",
+            "homepage": "https://github.com/cejobelo",
+            "role": "Developer"
+        }
+    ],
+
+    "scripts": {
+        "ajax": "Hamtaro\\Scripts::ajax",
+        "component": "Hamtaro\\Scripts::component",
+        "form": "Hamtaro\\Scripts::form",
+        "modal": "Hamtaro\\Scripts::modal",
+        "page": "Hamtaro\\Scripts::page",
+        "jsevent": "Hamtaro\\Scripts::jsevent"
+    }
+}
