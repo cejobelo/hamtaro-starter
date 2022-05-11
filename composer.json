@@ -23,11 +23,11 @@
     ],
 
     "scripts": {
-        "ajax": "Hamtaro\\Scripts::ajax",
-        "component": "Hamtaro\\Scripts::component",
-        "form": "Hamtaro\\Scripts::form",
-        "modal": "Hamtaro\\Scripts::modal",
-        "page": "Hamtaro\\Scripts::page",
-        "jsevent": "Hamtaro\\Scripts::jsevent"
+        "ajax": "Hamtaro\\Script\\Workflow\\CreateAjaxRequest::run",
+        "component": "Hamtaro\\Script\\Workflow\\CreateComponent::run",
+        "form": "Hamtaro\\Script\\Workflow\\CreateForm::run",
+        "modal": "Hamtaro\\Script\\Workflow\\CreateModal::run",
+        "page": "Hamtaro\\Script\\Workflow\\CreatePage::run",
+        "jsevent": "Hamtaro\\Script\\Workflow\\CreateJavascriptEvent::run"
     }
 }

@@ -23,7 +23,7 @@
   },
 
   "scripts": {
-    "start:dev": "webpack --config node_modules/hamtaro.js/webpack/webpack.dev.js",
-    "start:build": "webpack --config node_modules/hamtaro.js/webpack/webpack.prod.js"
+    "assets:dev": "webpack --config node_modules/hamtaro.js/webpack:dev.js",
+    "assets": "webpack --config node_modules/hamtaro.js/webpack.js"
   }
 }
