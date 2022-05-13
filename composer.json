@@ -1,7 +1,9 @@
 {
     "name": "cejobelo/hamtaro-starter",
+    "description": "Start your Hamtaro application with hamtaro-starter.",
     "type": "project",
     "license": "MIT",
+    "keywords": ["hamtaro", "hamtaro-starter"],
 
     "autoload": {
         "psr-4": {
@@ -10,7 +12,8 @@
     },
 
     "require": {
-        "cejobelo/hamtaro": "^1.0.0"
+        "cejobelo/hamtaro": "v1.1.0-alpha",
+        "michelf/php-markdown": "^1.9"
     },
 
     "authors": [
@@ -23,11 +26,11 @@
     ],
 
     "scripts": {
-        "ajax": "Hamtaro\\Script\\Workflow\\CreateAjaxRequest::run",
-        "component": "Hamtaro\\Script\\Workflow\\CreateComponent::run",
-        "form": "Hamtaro\\Script\\Workflow\\CreateForm::run",
-        "modal": "Hamtaro\\Script\\Workflow\\CreateModal::run",
-        "page": "Hamtaro\\Script\\Workflow\\CreatePage::run",
-        "jsevent": "Hamtaro\\Script\\Workflow\\CreateJavascriptEvent::run"
+        "ajax": "Hamtaro\\Command\\CreateAjaxRequest::run",
+        "component": "Hamtaro\\Command\\CreateComponent::run",
+        "form": "Hamtaro\\Command\\CreateForm::run",
+        "modal": "Hamtaro\\Command\\CreateModal::run",
+        "page": "Hamtaro\\Command\\CreatePage::run",
+        "event": "Hamtaro\\Command\\CreateEvent::run"
     }
 }
