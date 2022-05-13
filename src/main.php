@@ -21,7 +21,6 @@ return [
         App\Controller\Modal\CreateModal\CreateModal::class,
         App\Controller\Modal\CreatePage\CreatePage::class,
         # Pages
-        Hamtaro\Controller\Page\Error\Error::class,
         App\Controller\Page\Guide\Guide::class,
     ],
 ];
