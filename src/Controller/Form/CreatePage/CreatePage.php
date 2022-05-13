@@ -1,6 +1,7 @@
 <?php
 namespace App\Controller\Form\CreatePage;
 
+use Exception;
 use Hamtaro\Controller\Form\AbstractForm;
 use Hamtaro\Controller\RequestParamConfig;
 
@@ -22,13 +23,14 @@ class CreatePage extends AbstractForm
 
     /**
      * @inheritDoc
+     * @throws Exception
      * @see AbstractForm::executeAndGetResponse()
      */
     public function executeAndGetResponse()
     {
         $this->Core->Workflow()->createController(
             $this->aInputs['ctrl_controller'],
-            \Hamtaro\Command\CreatePage::getSrcFolder(),
+            \Hamtaro\Command\CreatePage::getSrcTarget(),
             \Hamtaro\Command\CreatePage::getTemplates()
         );
 

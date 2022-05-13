@@ -1,6 +1,7 @@
 <?php
 namespace App\Controller\Form\CreateComponent;
 
+use Exception;
 use Hamtaro\Controller\Form\AbstractForm;
 use Hamtaro\Controller\RequestParamConfig;
 
@@ -22,13 +23,14 @@ class CreateComponent extends AbstractForm
 
     /**
      * @inheritDoc
+     * @throws Exception
      * @see AbstractForm::executeAndGetResponse()
      */
     public function executeAndGetResponse()
     {
         $this->Core->Workflow()->createController(
             $this->aInputs['ctrl_controller'],
-            \Hamtaro\Command\CreateComponent::getSrcFolder(),
+            \Hamtaro\Command\CreateComponent::getSrcTarget(),
             \Hamtaro\Command\CreateComponent::getTemplates()
         );
 

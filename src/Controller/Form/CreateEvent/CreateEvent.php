@@ -1,6 +1,7 @@
 <?php
 namespace App\Controller\Form\CreateEvent;
 
+use Exception;
 use Hamtaro\Controller\Form\AbstractForm;
 use Hamtaro\Controller\RequestParamConfig;
 
@@ -22,13 +23,14 @@ class CreateEvent extends AbstractForm
 
     /**
      * @inheritDoc
+     * @throws Exception
      * @see AbstractForm::executeAndGetResponse()
      */
     public function executeAndGetResponse()
     {
         $this->Core->Workflow()->createController(
             $this->aInputs['ctrl_controller'],
-            \Hamtaro\Command\CreateEvent::getSrcFolder(),
+            \Hamtaro\Command\CreateEvent::getSrcTarget(),
             \Hamtaro\Command\CreateEvent::getTemplates()
         );
 

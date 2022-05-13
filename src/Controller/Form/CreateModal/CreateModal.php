@@ -1,6 +1,7 @@
 <?php
 namespace App\Controller\Form\CreateModal;
 
+use Exception;
 use Hamtaro\Controller\Form\AbstractForm;
 use Hamtaro\Controller\RequestParamConfig;
 
@@ -22,13 +23,14 @@ class CreateModal extends AbstractForm
 
     /**
      * @inheritDoc
+     * @throws Exception
      * @see AbstractForm::executeAndGetResponse()
      */
     public function executeAndGetResponse()
     {
         $this->Core->Workflow()->createController(
             $this->aInputs['ctrl_controller'],
-            \Hamtaro\Command\CreateModal::getSrcFolder(),
+            \Hamtaro\Command\CreateModal::getSrcTarget(),
             \Hamtaro\Command\CreateModal::getTemplates()
         );
 
