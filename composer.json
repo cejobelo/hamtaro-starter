@@ -12,7 +12,7 @@
     },
 
     "require": {
-        "cejobelo/hamtaro": "v1.1.0-alpha",
+        "cejobelo/hamtaro": "^1",
         "michelf/php-markdown": "^1.9"
     },
 
