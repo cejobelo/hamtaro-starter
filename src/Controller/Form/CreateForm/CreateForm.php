@@ -3,7 +3,7 @@ namespace App\Controller\Form\CreateForm;
 
 use Exception;
 use Hamtaro\Controller\Form\AbstractForm;
-use Hamtaro\Controller\RequestParamConfig;
+use Hamtaro\Controller\InputConfig;
 
 /**
  * @author Phil'dy Jocelyn Belcou <pj.belcou@gmail.com>
@@ -17,7 +17,7 @@ class CreateForm extends AbstractForm
     public function InputConfigs()
     {
         return [
-            new RequestParamConfig('ctrl_controller', 'string', true),
+            new InputConfig('ctrl_controller', 'string', true),
         ];
     }
 
